@@ -1,26 +1,29 @@
 
 function calculate(first_number, operator, second_number) {
-    switch (operator) {
-        case "+":
-            return first_number + second_number
-        case "-":
-            return first_number - second_number
-        case "*":
-            return first_number * second_number
-        case "/":
-            return first_number / second_number
-        default:
-            console.log("Wrong!")
-            break
+    if (operator == "+") {
+        return first_number + second_number
     }
+    else if (operator == "-") {
+        return first_number - second_number
+    }
+    else if (operator == "*") {
+        return first_number * second_number
+    }
+    else if (operator == "/") {
+        return first_number / second_number
+    }
+    else {
+        alert("The operator you enter is not valid")
+    }      
 }
+
 console.log("Hello")
 
-var first_number = parseFloat(prompt("Enter a number:"));
+var first_number = parseFloat(prompt("Enter the first number: "));
 
 var operator = prompt("Enter an operator:\n (+, -, *, /):");
 
-var second_number = parseFloat(prompt("Enter another number:"));
+var second_number = parseFloat(prompt("Enter the second number: "));
 
-var result = calculate(first_number, operator, second_number)
-alert("Result: " + result);
+var answer = calculate(first_number, operator, second_number)
+alert("Result: " + answer);
